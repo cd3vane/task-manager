@@ -1,22 +1,16 @@
 {
   "tasks": [
     {
-      "id": 2,
-      "text": "Finish Programming Project",
-      "day": "Feb 7th at 4:30pm",
-      "reminder": true
+      "text": "Write a Blog Post",
+      "day": "December 30th",
+      "reminder": false,
+      "id": 1
     },
     {
-      "id": 3,
-      "text": "Read Next Chapter",
-      "day": "Feb 6th at 1:30pm",
-      "reminder": false
-    },
-    {
-      "text": "Start Node.js tutorial",
-      "day": "Today",
-      "reminder": true,
-      "id": 4
+      "text": "Submit Applicatio",
+      "day": "January 3rd",
+      "reminder": false,
+      "id": 2
     }
   ]
 }
