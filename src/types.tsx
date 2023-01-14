@@ -4,3 +4,7 @@ export type Task = {
     date: string
     completed: boolean
 }
+
+export type List = {
+    tasks: Task[]
+}

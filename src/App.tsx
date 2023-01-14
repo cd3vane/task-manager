@@ -3,7 +3,6 @@ import './App.css'
 import { BrowserRouter as Router, Routes, Route  } from 'react-router-dom'
 import Header from './components/Header'
 import Tasks from './components/Tasks'
-import About from './components/About'
 import {TaskProvider} from "./context/AppContext";
 import AddTask from "./components/AddTask";
 
@@ -21,8 +20,7 @@ const App = () => {
                         {showAddTask && <AddTask />}
                     </div>
                   <Routes>
-                    <Route path='/' element={<Tasks/>}/>
-                    <Route path='/about' element={<About />} />
+                    <Route path='/task-manager' element={<Tasks/>}/>
                   </Routes>
                 </div>
             </div>

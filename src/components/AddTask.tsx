@@ -4,7 +4,7 @@ import {TaskContext} from "../context/AppContext";
 const AddTask = () => {
   const [title, setTitle] = useState<string>('')
   const [date, setDate] = useState<string>('')
-  const { addTask }  = useContext(TaskContext);
+  const { tasks, addTask }  = useContext(TaskContext);
 
   const onSubmit = (e : React.FormEvent) => {
     e.preventDefault()
@@ -14,7 +14,8 @@ const AddTask = () => {
       return
     }
 
-    addTask({ id: 1, title, date, completed: false });
+    addTask({ id: tasks.length + 1, title, date, completed: false });
+    alert("Task added successfully!");
 
     setTitle('')
     setDate('')
