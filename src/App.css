@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+body{
+  background-color: #282c34;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +39,22 @@
   to {
     transform: rotate(360deg);
   }
+}
+li.collection-item:not(:last-child) {
+  margin-bottom: 5px;
+
+}
+
+li.collection-item {
+  border: 3px solid black;
+}
+
+.add-form{
+  margin: 30px;
+}
+.add-form-open {
+  margin-top: 10px;
+  padding: 10px;
+  border: 2px solid black;
+  background-color: rgba(0,0,0,.5);
 }

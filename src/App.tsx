@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react'
+import './App.css'
+import { BrowserRouter as Router, Routes, Route  } from 'react-router-dom'
+import Header from './components/Header'
+import Tasks from './components/Tasks'
+import About from './components/About'
+import {TaskProvider} from "./context/AppContext";
+import AddTask from "./components/AddTask";
 
-function App() {
+const App = () => {
+  const [showAddTask, setShowAddTask] = useState<boolean>(false)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+      <TaskProvider>
+          <Router>
+            <div className='container-fluid'>
+              <Header />
+                <div className="container">
+                    <div className="add-form">
+                        <button className="btn orange darken-4" onClick={() => setShowAddTask(!showAddTask)}>{showAddTask ? 'Close Add Task': 'Add Task'}</button>
+                        {showAddTask && <AddTask />}
+                    </div>
+                  <Routes>
+                    <Route path='/' element={<Tasks/>}/>
+                    <Route path='/about' element={<About />} />
+                  </Routes>
+                </div>
+            </div>
+          </Router>
+      </TaskProvider>
+  )
 }
 
-export default App;
+export default App
