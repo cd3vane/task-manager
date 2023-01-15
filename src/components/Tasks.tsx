@@ -7,9 +7,9 @@ const Tasks = () => {
   return (
     <>
       <ul className="collection">
-        {tasks.map((task, index) => (
-            <li className="collection-item avatar grey lighten-2">
-            <Task key={index} task={task}  />
+        {tasks.map((task) => (
+            <li key={task.id} className="collection-item avatar light-green lighten-5">
+                <Task task={task} />
             </li>
         ))}
       </ul>
